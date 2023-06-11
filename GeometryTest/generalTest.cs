@@ -6,7 +6,11 @@ namespace GeometryTest
 {
     public class generalTest
     {
-        [TestCase(new Circle(12))]
+        [Test]
+        public void CalculateSquareTest()
+        {
+            CalculateSquare(new Circle(1));
+        }
         public double CalculateSquare(IFiguire figure)
         {
             return figure.GetSquare();

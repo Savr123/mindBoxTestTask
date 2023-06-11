@@ -25,11 +25,30 @@ namespace GeometryTest
             Assert.NotNull(square);
             Assert.AreEqual(result, square);
         }
+        [Test] 
+        public void ifRightTriangleTest() 
+        {
+            double a = 3d, b = 4d, c = 5d;
+            bool result = true;
+            var triangle = new Triangle(a, b, c);
+
+            bool TriangleShape = triangle.ifRightTriangle();
+            Assert.True(TriangleShape);
+        }
 
         [Test]
         public void InitNotTriangleTest()
         {
             Assert.Catch<ArgumentException>(() => new Triangle(1,2,3));
+        }
+
+        public bool isRightTriangle(double a, double c, double b)
+        {
+            Triangle triangle = new Triangle(a, b, c);
+
+
+
+            return false;
         }
     }
 }
